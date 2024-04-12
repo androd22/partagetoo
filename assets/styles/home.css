@@ -1,0 +1,17 @@
+.backgroundUrl{
+    background: url("../../assets/img/vente.png");
+    object-fit: cover;
+    height:85vh;
+}
+h1{
+   color : #2f3a50
+}
+
+.container-fluid{
+    padding: 0;
+
+}
+
+
+
+
