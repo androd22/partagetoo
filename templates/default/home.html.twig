@@ -7,21 +7,18 @@
       <div class="container-fluid">
          <div class="backgroundUrl"></div>
          <h1 class="py-5 text-center">Les annonces postées </h1>
-         {% for ad in ads %}
-            <div class="card mb-3 mx-auto" style="width : 50%;">
-               <div class="row g-0">
-                  <div class="col-md-4">
-                     <img src="{{ ad.image }}" class="img-fluid rounded-start" alt="...">
-                  </div>
-                  <div class="col-md-8">
-                     <div class="card-body">
-                        <h5 class="card-title">{{ ad.title }}</h5>
-                        <p class="card-text">{{ ad.description }}</p>
-                        <p>{{ ad.createdAt | date('Y-m-d') }}</p>
-                     </div>
+         <div class="d-flex flex-wrap justify-content-center margeCard">
+            {% for ad in ads %}
+               <div class="card shadow-lg p-3 mb-5 bg-body-tertiary mx-5" style="width: 25%;">
+                  <img src="{{ ad.image }}" class="card-img-top" alt="...">
+                  <div class="card-body">
+                     <h2 class="card-title">{{ ad.title }}</h2>
+                     <p class="card-text">{{ ad.description }}</p>
+                     <p class="fst-italic">{{ ad.createdAt | date('d-m-Y') }}</p>
+                     <a href="{{ path('ad_show', {'id' : ad.id}) }}" class="btn btn-info text-white">Voir l'annonce</a>
                   </div>
                </div>
-            </div>
-         {% endfor %}
+            {% endfor %}
+         </div>
       </div>
    {% endblock %}

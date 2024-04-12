@@ -12,6 +12,7 @@ class AppFixtures extends Fixture
     {
         $faker = \Faker\Factory::create();
         for ($i = 0; $i < 10; $i++) {
+            $picsi = $i+250;
             $ad = new Ad();
             $randomDateTime = $faker->dateTimeThisCentury();
 
@@ -20,7 +21,7 @@ class AppFixtures extends Fixture
                 ->setTitle($faker->sentence(5))
                 ->setDescription($faker->text())
                 ->setCreatedAt($randomDateImmutable)
-                ->setImage($faker->imageUrl());
+                ->setImage("https://picsum.photos/id/$picsi/150/150");
             $manager->persist($ad);
         }
         $manager->flush();

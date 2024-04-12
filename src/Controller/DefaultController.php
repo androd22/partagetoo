@@ -18,4 +18,5 @@ class DefaultController extends AbstractController
        return  $this->render('default/home.html.twig', ['ads' => $ads]);
     }
 
+
 }

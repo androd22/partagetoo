@@ -4,3 +4,11 @@ body {
     box-sizing : border-box;
     background: rgba( 244 , 238 , 229, 0.5);
 }
+h1, .card-title{
+    color : #2f3a50;
+}
+.marge{
+    margin-bottom: 100px;
+    background : #fff;
+    padding: 10px;
+}

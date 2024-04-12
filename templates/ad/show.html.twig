@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="container text-center marge shadow p-5 ">
+        <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{{ path('default_home') }}">Accueil</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Annonce</li>
+            </ol>
+        </nav>
+    <h1 class="py-3">Annonce {{ ad.id }} : {{ ad.title}}</h1>
+    <small class="fst-italic">{{ ad.createdAt | date('d-m-Y') }}</small>
+
+    <div>
+        <img class="w-50" src="{{ ad.image }}" alt="">
+    </div>
+    <p class="col-md-6  mx-auto fs-4">{{ ad.description }}</p>
+    </div>
+{% endblock %}
