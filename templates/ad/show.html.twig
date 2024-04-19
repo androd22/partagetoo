@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block body %}
+{% block content %}
 
     <div class="container text-center marge shadow p-5 ">
         <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
@@ -13,7 +13,7 @@
     <small class="fst-italic">{{ ad.createdAt | date('d-m-Y') }}</small>
 
     <div>
-        <img class="w-50" src="{{ ad.image }}" alt="">
+        <img class="w-50" src="{{ asset('images/post/' ~ ad.image) }}" alt="">
     </div>
     <p class="col-md-6  mx-auto fs-4">{{ ad.description }}</p>
     </div>

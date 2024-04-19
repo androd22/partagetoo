@@ -3,14 +3,14 @@
    <link rel="stylesheet" href="{{ asset('styles/home.css') }}">
 {% endblock %}
 
-   {% block body %}
+   {% block content %}
       <div class="container-fluid">
          <div class="backgroundUrl"></div>
          <h1 class="py-5 text-center">Les annonces postées </h1>
          <div class="d-flex flex-wrap justify-content-center margeCard">
             {% for ad in ads %}
                <div class="card shadow-lg p-3 mb-5 bg-body-tertiary mx-5" style="width: 25%;">
-                  <img src="{{ ad.image }}" class="card-img-top" alt="...">
+                  <img src="{{ asset('/images/post/' ~ ad.image) }}" class="card-img-top" alt="...">
                   <div class="card-body">
                      <h2 class="card-title">{{ ad.title }}</h2>
                      <p class="card-text">{{ ad.description }}</p>
